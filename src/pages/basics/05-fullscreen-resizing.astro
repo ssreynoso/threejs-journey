@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import FirstSectionNavbar from '../../components/threejs/FirstSectionNavbar.astro'
+
+---
+
+<Layout title='Threejs 05 - Fullscreen and Resizing'>
+    <FirstSectionNavbar title='Fullscreen and Resizing' className='container' />
+    <canvas id="webgl"></canvas>
+    <script src='../../scripts/basics/05-fullscreen-resizing.ts'></script>
+</Layout>
+
+
+<!-- Los estilos tienen scope a nivel de archivo o componente -->
+
+<!-- Esto es una directiva, el is:global -->
+<!-- <style is:global> -->
+<style>
+   
+</style>

@@ -1,0 +1,20 @@
+---
+interface Props {
+    options: { value: string, label: string }[]
+    title: string
+    className?: string
+}
+
+const { options, title, className } = Astro.props
+---
+
+<div class={className || ''}>
+    <nav class="overflow-y-auto w-1/2">
+        <ul class="flex gap-4 h-12 items-center">
+            {options.map(option => (
+                <li><a class="hover:underline w-max flex" href={option.value}>{option.label}</a></li>
+            ))}
+        </ul>
+    </nav>
+    <h1 class="text-2xl font-bold font-mono bg-slate-800 w-max">{title}</h1>
+</div>

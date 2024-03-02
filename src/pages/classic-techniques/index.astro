@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import sectionOptions from '../../lib/section-options'
+
+const options = sectionOptions.secondSection
+---
+
+<Layout title='Basics'>
+    <div class="container">
+        <h1 class="text-2xl font-bold font-mono bg-slate-800 w-max">Basics</h1>
+        <ul class="list-disc ml-8">
+            {options.map(op => (
+                <li>
+                    <a class="hover:underline" href={op.value}>{op.label}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</Layout>
+
+<style>
+   
+</style>

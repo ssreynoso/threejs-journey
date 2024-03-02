@@ -1,0 +1,20 @@
+---
+import Navbar from '../../components/threejs/FirstSectionNavbar.astro'
+import Layout from '../../layouts/Layout.astro'
+
+---
+
+<Layout title='Threejs 06 - Geometries'>
+    <Navbar title='Geometries' className='absolute top-4 z-30 container' />
+    <canvas id="webgl" class="fixed top-0 left-0 outline-none z-10"></canvas>
+    <script src='../../scripts/basics/06-geometries.ts'></script>
+</Layout>
+
+
+<!-- Los estilos tienen scope a nivel de archivo o componente -->
+
+<!-- Esto es una directiva, el is:global -->
+<!-- <style is:global> -->
+<style>
+   
+</style>

@@ -1,0 +1,16 @@
+---
+import Navbar from './Navbar.astro'
+import sectionOptions from '../../lib/section-options'
+
+type Props = {
+    title: string
+    className?: string
+}
+
+const options = sectionOptions.secondSection
+
+const { title, className } = Astro.props
+
+---
+
+<Navbar options={options} title={title} className={className} />
