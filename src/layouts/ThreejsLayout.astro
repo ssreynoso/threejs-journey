@@ -1,5 +1,5 @@
 ---
-import Navbar from '../components/threejs/FirstSectionNavbar.astro'
+import FirstSectionNavbar from '../components/threejs/FirstSectionNavbar.astro'
 // Estas son las propiedades que podemos usar en el layout.
 interface Props {
     title: string
@@ -9,6 +9,6 @@ const { title } = Astro.props
 ---
 
 <main class="container pt-0 z-30">
-    <Navbar title={title} />
+    <FirstSectionNavbar title={title} />
     <slot />
 </main>

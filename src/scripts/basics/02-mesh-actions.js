@@ -1,7 +1,8 @@
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshBasicMaterial({
-    color: 'red'
+    color: 'red',
 })
+
 // Un mesh está compuesto por una geometría y un material.
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
@@ -36,6 +37,6 @@ mesh.scale.set(0.5, 2, 2)
 // Rotation
 // We can made rotations with PI. PI = 180°, 2PI = 360° etc.
 mesh.rotation.reorder('YXZ')
-mesh.rotation.y = (Math.PI / 4)
-mesh.rotation.x = (Math.PI / 3)
+mesh.rotation.y = Math.PI / 4
+mesh.rotation.x = Math.PI / 3
 // mesh.rotation.z = (Math.PI / 2)
