@@ -1,15 +1,18 @@
 ---
+import { cn } from '../../lib/utils.ts'
+
 interface Props {
     options: { value: string, label: string }[]
     title: string
     className?: string
+    navClassName?: string
 }
 
-const { options, title, className } = Astro.props
+const { options, title, className, navClassName } = Astro.props
 ---
 
 <div class={className || ''}>
-    <nav class="overflow-y-auto w-1/2">
+    <nav class={cn('overflow-y-auto w-1/2', navClassName)}>
         <ul class="flex gap-4 h-12 items-center">
             {options.map(option => (
                 <li><a class="hover:underline w-max flex" href={option.value}>{option.label}</a></li>

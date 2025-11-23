@@ -6,7 +6,12 @@ import FirstSectionNavbar from '../../components/threejs/FirstSectionNavbar.astr
 
 <Layout title='Threejs 04 - Cameras'>
     <FirstSectionNavbar title='Cameras' className='container' />
-    <canvas id="webgl"></canvas>
+    <div class='container my-4'>
+        <canvas id="webgl" class='w-[800px] h-[600px] border border-white'></canvas>
+        <p class='mt-4'> 
+            En esta sección aprenderemos sobre las cámaras en Three.js. Las cámaras son esenciales para definir la perspectiva desde la cual se renderiza la escena 3D. Cubriremos los tipos de cámaras disponibles, cómo configurarlas y cómo moverlas dentro de la escena para obtener diferentes vistas.
+        </p>
+    </div>
     <script src='../../scripts/basics/04-cameras.ts'></script>
 </Layout>
 

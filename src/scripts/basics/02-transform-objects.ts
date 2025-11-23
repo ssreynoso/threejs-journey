@@ -14,6 +14,7 @@ const group = new THREE.Group()
 scene.add(group)
 
 const createCube = (color: string, position: THREE.Vector3) => {
+    // Crea un mesh con una geometría de caja y un material básico
     const cube = new THREE.Mesh(
         new THREE.BoxGeometry(position.x, position.y, position.z),
         new THREE.MeshBasicMaterial({ color })
@@ -29,7 +30,7 @@ cube2.position.y = 0.75
 group.add(cube2)
 
 const cube3 = createCube('#0000ff', new THREE.Vector3(0.25, 0.25, 0.25))
-cube3.position.y = 0.75 + 0.25 + (0.25 / 2)
+cube3.position.y = 0.75 + 0.25 + 0.25 / 2
 group.add(cube3)
 
 group.position.y = 1
@@ -47,7 +48,7 @@ group.rotation.x = Math.PI / 4
 const axesHelper = new THREE.AxesHelper(100)
 scene.add(axesHelper)
 
-// Look at 
+// Look at
 // camera.lookAt(mesh.position)
 
 // -----------
@@ -57,7 +58,7 @@ if (!canvasElement) {
     throw new Error('Canvas not found')
 }
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvasElement
+    canvas: canvasElement,
 })
 renderer.setSize(sizes.width, sizes.height)
 
